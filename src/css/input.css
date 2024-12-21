@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1 {
+    @apply text-4xl font-bold text-gray-900;
+  }
+
+  h2 {
+    @apply text-3xl font-semibold text-gray-800;
+  }
+
+  h3 {
+    @apply text-2xl font-medium text-gray-800;
+  }
+
+  p {
+    @apply text-base text-gray-600 leading-relaxed;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl;
+  }
+
+  .section-title {
+    @apply text-3xl font-bold text-gray-900 mb-6;
+  }
+
+  .price-tag {
+    @apply text-4xl font-extrabold text-blue-600;
+  }
+
+  .nav-link {
+    @apply text-white hover:text-blue-200 transition-colors duration-200;
+  }
+
+  .btn {
+    @apply px-6 py-2 rounded-lg font-medium transition-colors duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700;
+  }
+}
+
+/* Custom styles */
+.section-fade {
+  @apply opacity-0 translate-y-4 transition-all duration-500;
+}
+
+.section-fade.visible {
+  @apply opacity-100 translate-y-0;
+}
+
+.course-card {
+  @apply card border-t-4 border-blue-600;
+}
+
+.faq-item {
+  @apply bg-white rounded-lg shadow-md overflow-hidden;
+}
+
+.faq-item summary {
+  @apply px-6 py-4 cursor-pointer hover:bg-gray-50 flex items-center justify-between;
+}
+
+.faq-item summary::-webkit-details-marker {
+  @apply hidden;
+}
+
+.faq-item[open] summary {
+  @apply border-b border-gray-200;
+}
+
+.faq-item p {
+  @apply px-6 py-4 bg-gray-50;
+}
+
+/* Sidebar improvements */
+.sidebar {
+  @apply bg-gradient-to-b from-blue-600 to-blue-700 text-white;
+}
+
+/* Header improvements */
+.main-header {
+  @apply bg-gradient-to-r from-blue-600 to-blue-700;
+}
+
+/* Card grid improvements */
+.card-grid {
+  @apply grid gap-8 md:grid-cols-3;
+}
