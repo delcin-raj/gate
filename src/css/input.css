@@ -51,14 +51,6 @@
 }
 
 /* Custom styles */
-.section-fade {
-  @apply opacity-0 translate-y-4 transition-all duration-500;
-}
-
-.section-fade.visible {
-  @apply opacity-100 translate-y-0;
-}
-
 .course-card {
   @apply card border-t-4 border-blue-600;
 }
@@ -96,4 +88,15 @@
 /* Card grid improvements */
 .card-grid {
   @apply grid gap-8 md:grid-cols-3;
+}
+
+/* Animation utilities */
+@layer utilities {
+  .section-fade {
+    @apply opacity-0 translate-y-4 transition-all duration-500;
+  }
+
+  .section-fade.visible {
+    @apply opacity-100 translate-y-0;
+  }
 }
